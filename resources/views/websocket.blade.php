@@ -8,7 +8,7 @@
 </head>
 <body class="pt-3">
     <x-navbar />
-    <main class="mx-auto p-1 w-96 h-screen relative flex flex-col">
+    <main class="mx-auto p-1 w-96 h-[90vh] relative flex flex-col">
         <input type="hidden" id="other_id" value="{{ $other->id }}">
         <div class="p-1 absolute top-0 left-0 right-0 bg-gray-200 flex gap-2 items-center">
             <div class="relative w-12 h-12 bg-cover bg-center rounded-full" style="background-image: url({{ asset('storage/' . $other->image) }});">
@@ -29,6 +29,7 @@
         </ul>    
         <form id="form" class="absolute bottom-0 left-0 right-0">
             <input id="cid" type="hidden" name="cid" value="{{$cid}}">
+            <p id="error" class="hidden text-red-500">you cannot send an empty message!!</p>
             <div class="w-full flex">
                 <input class="p-1 w-full outline-none border border-black-200" id="input-message" type="text" name="message" placeholder="write your message">
                 <button class="py-1 px-3 bg-blue-400 text-white font-bold">send</button>
