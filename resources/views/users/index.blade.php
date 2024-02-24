@@ -9,7 +9,7 @@
 <body>
     <x-flash />
     <x-navbar />
-    <main class="py-6 px-3 grid grid-cols-4 gap-4">
+    <main class="py-6 px-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         @foreach($users as $user)
             @if(auth()->id() !== $user->id)
                 <x-user :user="$user" />

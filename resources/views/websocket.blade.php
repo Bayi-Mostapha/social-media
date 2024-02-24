@@ -8,7 +8,7 @@
 </head>
 <body class="pt-3">
     <x-navbar />
-    <main class="mx-auto p-1 w-96 h-[90vh] relative flex flex-col">
+    <main class="mx-auto p-1 sm:w-96 w-full h-[90vh] relative flex flex-col">
         <input type="hidden" id="other_id" value="{{ $other->id }}">
         <div class="p-1 absolute top-0 left-0 right-0 bg-gray-200 flex gap-2 items-center">
             <div class="relative w-12 h-12 bg-cover bg-center rounded-full" style="background-image: url({{ asset('storage/' . $other->image) }});">

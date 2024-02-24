@@ -12,13 +12,14 @@
             <a href="{{ route('posts.edit', $post) }}" class="block bg-green-100 text-green-500 px-3 py-1 rounded-md">Edit</a>
         @endcan
     </div>
-    <div class="flex gap-2 items-center">
+    <div class="p-1 sm:flex gap-2 items-center">
         <div class="w-14 h-14 bg-cover bg-center rounded-full" style="background-image: url({{ asset('storage/' . $post->user->image) }});"></div>
         <div class="flex flex-col">
             <p class="text-blue-500">{{$post->user->name}}</p>
             <p class="text-sm text-gray-500">posted {{$post->created_at}}</p>
         </div>
     </div>
+    <hr>
     <h4 class="my-2 font-semibold">{{$post->title}}</h4>
     <p>{{$post->body}}</p>
 

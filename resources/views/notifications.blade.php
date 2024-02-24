@@ -12,7 +12,7 @@
     <main class="p-2">
         <h1 class="text-2xl font-bold">Notifications</h1>
         @foreach ($notifications as $notification)
-            <div class="my-2 px-3 py-2 bg-gray-50 rounded-sm flex justify-between items-center">
+            <div class="my-2 px-3 py-2 bg-gray-50 rounded-sm sm:flex justify-between items-center">
                 <div class="flex flex-col">
                     <p class="text-gray-500 font-semibold">{{$notification->author->name}} commented on your post #{{$notification->post_id}}</p>
                     <p class="text-gray-500 text-sm">{{$notification->created_at}}</p>
